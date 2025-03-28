@@ -1,0 +1,77 @@
+/* Estilo general de la página */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Modo oscuro global */
+.dark-mode {
+  background-color: #2e2e2e;
+  color: white;
+}
+
+/* Ajustes de contenedor */
+.container {
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo para los inputs, selects y botones en modo oscuro */
+input, select, button {
+  background-color: #232323;
+  color: white;
+  border: 1px solid #505050;
+  padding: 8px;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Estilo para el foco en los inputs (cuando están seleccionados) */
+input:focus, select:focus, button:focus {
+  outline: none;
+  border-color: #3f51b5;
+  box-shadow: 0 0 5px rgba(63, 81, 181, 0.6);
+}
+
+/* Botón de cambio de tema */
+.toggle-theme {
+  margin-bottom: 15px;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-theme:hover {
+  background-color: #555;
+}
+
+/* Ajuste en el título */
+h2 {
+  color: inherit;
+}
+
+/* Estilo para el área de texto en modo oscuro */
+textarea.form-control {
+  min-height: 350px; /* Ajusta la altura mínima del textarea */
+  resize: both; /* Permite que el usuario cambie el tamaño tanto vertical como horizontalmente */
+}
+
+/* En el caso de que desees más controles para el tema claro */
+body:not(.dark-mode) {
+  background-color: #fff;
+  color: black;
+}
+
+body:not(.dark-mode) input,
+body:not(.dark-mode) select,
+body:not(.dark-mode) button {
+  background-color: #f4f4f4;
+  color: black;
+  border: 1px solid #ccc;
+}
